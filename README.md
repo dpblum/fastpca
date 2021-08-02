@@ -11,9 +11,10 @@ n    = number of observations
 p    = number of dimensions
 
 OUTPUT:
-c    = principal components, PC
-sc   = PC scores (projections of observations on PC's)
-lat  = variance captured by each PC score
+c    = principal components
+sc   = principal components scores (projections of observations on principal components)
+lat  = variance captured by each principal component score
 expl = cumulative lat in percent
+
 The p-n PC's that does not explain any variance 
-are automatically excluded from the results
+are automatically excluded from the results.
