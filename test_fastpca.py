@@ -3,7 +3,7 @@ import numpy as np
 from fastpca import fastpca 
 from sklearn.decomposition import PCA
 
-# Sample data (e.g. 300 observations with 300.000 features each)
+# Sample data (e.g. 300 observations with 500.000 features each)
 data = np.random.rand(300,500000)
 
 # Standard PCA
