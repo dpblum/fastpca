@@ -10,15 +10,14 @@ def fastpca(data):
     # much faster than Python's in-built PCA function 
     # (from sklearn.decomposition) or MATLAB's in-build function pca.m.
     
-    # Decrease in computation time results from calculating the PCs from the 
-    # (smaller) covariance matrix of the transposed input-matrix "data" instead 
-    # of the large covariance matrix of the original input matrix which are 
-    # then use to project the observations to achieve the PCs of the large DxD 
-    # covariance matrix. 
+    # Decrease in computation time comes from calculating the eigenvectors of the 
+    # covariance matrix of the transposed input-matrix "data" (instead 
+    # of the large covariance matrix of the original input matrix) which then can be
+    # transformed to the PC's of the p*p covariance matrix.
  
-    # By default, fastpca removes the mean of each observation.  In this first 
-    # implementation of fastpca, I skipped calculation of Hotelling T-Squared 
-    # Statistic as I didn't need it so far. 
+    # By default, fastpca removes the mean of each observation.  
+    # In this first implementation of fastpca, I skipped calculation of 
+    # Hotelling T-Squared Statistic. 
 
     # INPUT: 
     # data = matrix of size n*p
